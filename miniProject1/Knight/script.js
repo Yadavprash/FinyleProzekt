@@ -44,7 +44,7 @@ const KNIGHT_DESTINATION_Y = 140;
 const NO_OF_FRAMES = [22, 15, 15, 14, 15, 8, 7];
 let frameX = 0;
 let gameFrame = 0;
-const staggerFrames = 10;
+const staggerFrames = 12;
 function animate() {
   ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   // ctx.drawImage(image,sx,sy,sw,sh,dx,dx,dw,dh); this is for reference

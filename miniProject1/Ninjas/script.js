@@ -29,7 +29,7 @@ const spiriteWidth = [268, 268];
 const spiriteHeight = [248, 248];
 
 let gameFrame = 0;
-const staggerFrame = 11;
+const staggerFrame = 10;
 const spiriteAnimations = [];
 const animationStates = [
   {

@@ -1,0 +1,20 @@
+body {
+  background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/03d6d1a5-7133-460b-a65f-b403f180281d/d380x7u-0170e0c4-c178-4dae-ae80-7c3442119c19.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwic3ViIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsImF1ZCI6WyJ1cm46c2VydmljZTpmaWxlLmRvd25sb2FkIl0sIm9iaiI6W1t7InBhdGgiOiIvZi8wM2Q2ZDFhNS03MTMzLTQ2MGItYTY1Zi1iNDAzZjE4MDI4MWQvZDM4MHg3dS0wMTcwZTBjNC1jMTc4LTRkYWUtYWU4MC03YzM0NDIxMTljMTkuanBnIn1dXX0.04HieNP6W1OpUl--LjblbCnA1TcxAQY0LzWEygURZdU");
+  /* background-position-x: 100vh; */
+  /* background-position-y: 100vh; */
+  width: 200vw;
+  height: 200vh;
+  overflow: hidden;
+}
+
+canvas {
+  border: solid rgb(21, 241, 17);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#collisionCanvas {
+  opacity: 0;
+}

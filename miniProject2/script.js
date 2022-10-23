@@ -43,7 +43,7 @@ class Layer {
     this.y = 0;
     this.width = 928;
     this.height = 793;
-    this.x2 = this.width;
+    // this.x2 = this.width; //Don't need the second variable-> only one variable is needed
     this.image = image;
     this.speedModifier = speedModifier;
     this.speed = gameSpeed * this.speedModifier;
@@ -51,17 +51,23 @@ class Layer {
   update() {
     this.speed = gameSpeed * this.speedModifier;
     if (this.x <= -this.width) {
-      this.x = this.width + this.x2 - this.speed;
+      this.x = 0;
     }
-    if (this.x2 <= -this.width) {
-      this.x2 = this.width + this.x - this.speed;
-    }
+    // if (this.x2 <= -this.width) {                  //Dont need to implement it this way.
+    //   this.x2 = this.width + this.x - this.speed; //this is called off setting!
+    // }
     this.x = Math.floor(this.x - this.speed);
     this.x2 = Math.floor(this.x2 - this.speed);
   }
   draw() {
     ctx.drawImage(this.image, this.x, this.y, this.width, this.height);
-    ctx.drawImage(this.image, this.x2, this.y, this.width, this.height);
+    ctx.drawImage(
+      this.image,
+      this.x + this.width,
+      this.y,
+      this.width,
+      this.height
+    );
   }
 }
 const layer1 = new Layer(backgroundLayer1, 0.2);
@@ -76,26 +82,28 @@ const layer9 = new Layer(backgroundLayer9, 1);
 const layer10 = new Layer(backgroundLayer10, 0.4);
 const layer11 = new Layer(backgroundLayer11, 0.6);
 
-const gameObjects = [
-  layer1,
-  layer2,
-  layer3,
-  layer4,
-  layer5,
-  layer6,
-  layer7,
-  layer8,
-  layer9,
-  layer10,
-  layer11,
-];
+window.addEventListener("load", function () {
+  const gameObjects = [
+    layer1,
+    layer2,
+    layer3,
+    layer4,
+    layer5,
+    layer6,
+    layer7,
+    layer8,
+    layer9,
+    layer10,
+    layer11,
+  ];
 
-function animate() {
-  ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-  gameObjects.forEach((object) => {
-    object.update();
-    object.draw();
-  });
-  requestAnimationFrame(animate);
-}
-animate();
+  function animate() {
+    ctx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
+    gameObjects.forEach((object) => {
+      object.update();
+      object.draw();
+    });
+    requestAnimationFrame(animate);
+  }
+  animate();
+});
