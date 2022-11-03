@@ -162,5 +162,5 @@ window.addEventListener("load", function () {
     requestAnimationFrame(animate);
   }
 
-  animate();
+  animate(0);
 });
