@@ -1,8 +1,6 @@
 # FinyleProzekt
 
-Final project for Cs50 is being made here.
-
-will be updating regularly!
+Was learning game dev with javascript here! done.
 
 arrow function => don't bind their own 'this', but they inherit the one from their parent
 scope, this is called lexical scoping.
